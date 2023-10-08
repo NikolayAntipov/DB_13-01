@@ -16,7 +16,7 @@
 Ответьте на следующие вопросы:
 
 Какие сетевые службы в ней разрешены?
-##### Ответ
+#### Ответ
 ```nmap
 Nmap scan report for 192.168.0.31
 Host is up (0.000087s latency).
@@ -48,8 +48,8 @@ PORT     STATE SERVICE
 ```
 Какие уязвимости были вами обнаружены? (список со ссылками: достаточно трёх уязвимостей)   
 Приведите ответ в свободной форме.
-##### Пример трёх уязвисмостей:  
-на 21м порту
+#### Пример трёх уязвисмостей:  
+##### на 21м порту
 ```nmap
 21/tcp open  ftp
 | ftp-vsftpd-backdoor:
@@ -69,7 +69,7 @@ PORT     STATE SERVICE
 |_      https://www.securityfocus.com/bid/48539
 MAC Address: 08:00:27:F8:B2:17 (Oracle VirtualBox virtual NIC)
 ```
-на порту 5432
+##### на порту 5432
 ```nmap
 Pre-scan script results:
 | broadcast-avahi-dos:
@@ -133,7 +133,7 @@ PORT     STATE SERVICE
 |     References:
 |_      https://weakdh.org
 ```
-на порту 25
+##### на порту 25
 ```nmap
 Pre-scan script results:
 | broadcast-avahi-dos:
