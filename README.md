@@ -16,9 +16,40 @@
 Ответьте на следующие вопросы:
 
 Какие сетевые службы в ней разрешены?
-Какие уязвимости были вами обнаружены? (список со ссылками: достаточно трёх уязвимостей)
+##### Ответ
+```nmap
+Nmap scan report for 192.168.0.31
+Host is up (0.000087s latency).
+Not shown: 977 closed tcp ports (reset)
+PORT     STATE SERVICE
+21/tcp   open  ftp
+22/tcp   open  ssh
+23/tcp   open  telnet
+25/tcp   open  smtp
+53/tcp   open  domain
+80/tcp   open  http
+111/tcp  open  rpcbind
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+512/tcp  open  exec
+513/tcp  open  login
+514/tcp  open  shell
+1099/tcp open  rmiregistry
+1524/tcp open  ingreslock
+2049/tcp open  nfs
+2121/tcp open  ccproxy-ftp
+3306/tcp open  mysql
+5432/tcp open  postgresql
+5900/tcp open  vnc
+6000/tcp open  X11
+6667/tcp open  irc
+8009/tcp open  ajp13
+8180/tcp open  unknown
+```
+Какие уязвимости были вами обнаружены? (список со ссылками: достаточно трёх уязвимостей)   
 Приведите ответ в свободной форме.
-##### Пример трёх уязвисмостей:
+##### Пример трёх уязвисмостей:  
+на 21м порту
 ```nmap
 21/tcp open  ftp
 | ftp-vsftpd-backdoor:
@@ -38,6 +69,7 @@
 |_      https://www.securityfocus.com/bid/48539
 MAC Address: 08:00:27:F8:B2:17 (Oracle VirtualBox virtual NIC)
 ```
+на порту 5432
 ```nmap
 Pre-scan script results:
 | broadcast-avahi-dos:
@@ -101,6 +133,7 @@ PORT     STATE SERVICE
 |     References:
 |_      https://weakdh.org
 ```
+на порту 25
 ```nmap
 Pre-scan script results:
 | broadcast-avahi-dos:
