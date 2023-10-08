@@ -18,7 +18,26 @@
 Какие сетевые службы в ней разрешены?
 Какие уязвимости были вами обнаружены? (список со ссылками: достаточно трёх уязвимостей)
 Приведите ответ в свободной форме.
-
+Пример трёх уязвисмостей:
+'''nmap
+21/tcp open  ftp
+| ftp-vsftpd-backdoor:
+|   VULNERABLE:
+|   vsFTPd version 2.3.4 backdoor
+|     State: VULNERABLE (Exploitable)
+|     IDs:  BID:48539  CVE:CVE-2011-2523
+|       vsFTPd version 2.3.4 backdoor, this was reported on 2011-07-04.
+|     Disclosure date: 2011-07-03
+|     Exploit results:
+|       Shell command: id
+|       Results: uid=0(root) gid=0(root)
+|     References:
+|       http://scarybeastsecurity.blogspot.com/2011/07/alert-vsftpd-download-backdoored.html
+|       https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/unix/ftp/vsftpd_234_backdoor.rb
+|       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-2523
+|_      https://www.securityfocus.com/bid/48539
+MAC Address: 08:00:27:F8:B2:17 (Oracle VirtualBox virtual NIC)
+'''
 ## Задание 2
 Проведите сканирование Metasploitable в режимах SYN, FIN, Xmas, UDP.
 
